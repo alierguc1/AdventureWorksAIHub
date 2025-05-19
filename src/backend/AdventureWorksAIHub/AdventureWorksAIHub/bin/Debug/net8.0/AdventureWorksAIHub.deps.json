@@ -728,11 +728,57 @@
           }
         }
       },
+      "NetTopologySuite/2.5.0": {
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "NRedisStack/1.0.0": {
+        "dependencies": {
+          "NetTopologySuite": "2.5.0",
+          "StackExchange.Redis": "2.8.37"
+        },
+        "runtime": {
+          "lib/net8.0/NRedisStack.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
+        "dependencies": {
+          "System.IO.Pipelines": "6.0.3"
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.2.8.1080"
+          }
+        }
+      },
       "Scalar.AspNetCore/1.2.66": {
         "runtime": {
           "lib/net8.0/Scalar.AspNetCore.dll": {
             "assemblyVersion": "1.2.66.0",
             "fileVersion": "1.2.66.0"
+          }
+        }
+      },
+      "StackExchange.Redis/2.8.37": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
+          "Pipelines.Sockets.Unofficial": "2.2.8"
+        },
+        "runtime": {
+          "lib/net8.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.8.37.59676"
           }
         }
       },
@@ -1035,6 +1081,8 @@
           "AdventureWorksAIHub.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.1",
           "Microsoft.Extensions.Http": "8.0.1",
+          "NRedisStack": "1.0.0",
+          "StackExchange.Redis": "2.8.37",
           "System.Text.Json": "8.0.5"
         },
         "runtime": {
@@ -1416,12 +1464,40 @@
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
     },
+    "NetTopologySuite/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5/+2O2ADomEdUn09mlSigACdqvAf0m/pVPGtIPEPQWnyrVykYY0NlfXLIdkMgi41kvH9kNrPqYaFBTZtHYH7Xw==",
+      "path": "nettopologysuite/2.5.0",
+      "hashPath": "nettopologysuite.2.5.0.nupkg.sha512"
+    },
+    "NRedisStack/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vCSwHNibWIgDic2sXAP23s7m7IMu3dlWdfv8LIufFfVGm+yyZ9MXCTFQaGw6zv4hE7k9RhJp64ObvLYx+2sQIQ==",
+      "path": "nredisstack/1.0.0",
+      "hashPath": "nredisstack.1.0.0.nupkg.sha512"
+    },
+    "Pipelines.Sockets.Unofficial/2.2.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
+      "path": "pipelines.sockets.unofficial/2.2.8",
+      "hashPath": "pipelines.sockets.unofficial.2.2.8.nupkg.sha512"
+    },
     "Scalar.AspNetCore/1.2.66": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-BKz+OAl2LTThoNoj7TnXFoXqmZzawXDFhmP5dPDfTe7Z7Dls632vxKxCaKhowKFRbiTZIcrvWmiVMSNrsBAYaQ==",
       "path": "scalar.aspnetcore/1.2.66",
       "hashPath": "scalar.aspnetcore.1.2.66.nupkg.sha512"
+    },
+    "StackExchange.Redis/2.8.37": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ULscDAQR+z132IsLczXcM/PG+EyfQMNxhvqjG1Xd/h/J1O9prsUU4pG9d95xv77lUF8v3X6owpf/11Uh0uvZAQ==",
+      "path": "stackexchange.redis/2.8.37",
+      "hashPath": "stackexchange.redis.2.8.37.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.6.2": {
       "type": "package",

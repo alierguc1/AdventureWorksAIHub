@@ -49,14 +49,14 @@
     "ContainingType": "AdventureWorksAIHub.Controllers.RagController",
     "Method": "AskQuestion",
     "RelativePath": "api/Rag/AskQuestion",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "question",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "AdventureWorksAIHub.Core.Application.Requests.QuestionRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -80,26 +80,5 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdventureWorksAIHub.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[AdventureWorksAIHub.WeatherForecast, AdventureWorksAIHub, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

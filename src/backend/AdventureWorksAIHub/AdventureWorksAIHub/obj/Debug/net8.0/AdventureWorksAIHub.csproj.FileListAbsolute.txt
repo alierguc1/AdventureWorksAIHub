@@ -150,3 +150,7 @@ C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\Adven
 C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\AdventureWorksAIHub\AdventureWorksAIHub\bin\Debug\net8.0\AdventureWorksAIHub.Infrastructure.pdb
 C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\AdventureWorksAIHub\AdventureWorksAIHub\obj\Debug\net8.0\AdventureWorksAIHub.sourcelink.json
 C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\AdventureWorksAIHub\AdventureWorksAIHub\bin\Debug\net8.0\Scalar.AspNetCore.dll
+C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\AdventureWorksAIHub\AdventureWorksAIHub\bin\Debug\net8.0\NetTopologySuite.dll
+C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\AdventureWorksAIHub\AdventureWorksAIHub\bin\Debug\net8.0\NRedisStack.dll
+C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\AdventureWorksAIHub\AdventureWorksAIHub\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\AdventureWorksAIHub\AdventureWorksAIHub\bin\Debug\net8.0\StackExchange.Redis.dll

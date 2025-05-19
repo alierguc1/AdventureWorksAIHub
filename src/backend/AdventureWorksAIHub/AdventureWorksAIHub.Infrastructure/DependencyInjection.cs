@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using StackExchange.Redis;
 
 namespace AdventureWorksAIHub.Infrastructure
 {
@@ -26,7 +27,12 @@ namespace AdventureWorksAIHub.Infrastructure
             // Repositories
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductVectorRepository, ProductVectorRepository>();
-
+            services.AddSingleton<IConnectionMultiplexer>(sp =>
+            {
+                var configuration = sp.GetRequiredService<IConfiguration>();
+                var redisConnection = configuration.GetConnectionString("Redis");
+                return ConnectionMultiplexer.Connect(redisConnection);
+            });
             // Services
             services.AddHttpClient<IOllamaService, OllamaService>();
             services.AddScoped<IVectorStoreService, VectorStoreService>();

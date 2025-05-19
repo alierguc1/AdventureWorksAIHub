@@ -1,4 +1,5 @@
 ﻿using AdventureWorksAIHub.Core.Application.Dtos;
+using AdventureWorksAIHub.Core.Application.Requests;
 using AdventureWorksAIHub.Core.Application.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,18 +24,19 @@ namespace AdventureWorksAIHub.Controllers
             _logger = logger;
         }
 
-        // GET: api/Rag/AskQuestion
-        [HttpGet("AskQuestion")]
-        public async Task<ActionResult<RagResponseDto>> AskQuestion([FromQuery] string question)
+        // POST: api/Rag/AskQuestion
+        [HttpPost("AskQuestion")]
+        public async Task<ActionResult<RagResponseDto>> AskQuestion([FromBody] QuestionRequest request)
         {
-            if (string.IsNullOrEmpty(question))
+            if (request == null || string.IsNullOrEmpty(request.question))
             {
                 return BadRequest("Question cannot be empty");
             }
 
             try
             {
-                var response = await _ragService.AskQuestionAsync(question);
+                _logger.LogInformation("Processing question: {Question}", request.question);
+                var response = await _ragService.AskQuestionAsync(request.question);
                 return Ok(response);
             }
             catch (System.Exception ex)
@@ -50,7 +52,9 @@ namespace AdventureWorksAIHub.Controllers
         {
             try
             {
+                _logger.LogInformation("Starting product indexing...");
                 await _vectorStoreService.IndexProductDescriptionsAsync();
+                _logger.LogInformation("Products indexed successfully");
                 return Ok("Products indexed successfully");
             }
             catch (System.Exception ex)

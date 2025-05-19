@@ -1,3 +1,4 @@
+using AdventureWorksAIHub.Core.Application.Mappings;
 using AdventureWorksAIHub.Infrastructure;
 using AdventureWorksAIHub.Middleware;
 using AutoMapper;
@@ -20,7 +21,12 @@ builder.Services.AddInfrastructure(builder.Configuration);
 // Add Endpoints API Explorer
 builder.Services.AddEndpointsApiExplorer();
 // Þu anda eksik olan bir þeyse, ekleyebilirsiniz
-builder.Services.AddAutoMapper(typeof(AdventureWorksAIHub.Core.Application.Mappings.MappingProfile));
+builder.Services.AddAutoMapper(typeof(Program).Assembly, typeof(MappingProfile).Assembly);
+
+// Veya daha spesifik olarak
+builder.Services.AddAutoMapper(cfg => {
+    cfg.AddProfile<MappingProfile>();
+}, typeof(MappingProfile).Assembly);
 
 // Add Swagger Generator
 builder.Services.AddSwaggerGen();

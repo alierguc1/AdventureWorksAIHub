@@ -37,22 +37,25 @@ namespace AdventureWorksAIHub.Infrastructure.Services
         {
             _logger.LogInformation($"Processing question: {question}");
 
-           
             var similarProducts = await _vectorStoreService.FindSimilarProductsAsync(question, 3);
-
             if (similarProducts.Count == 0)
             {
                 _logger.LogInformation("No similar products found");
-                
+
                 var directResponse = await _ollamaService.GenerateCompletionAsync(question);
                 return new RagResponseDto { Answer = directResponse };
             }
 
-
             var productIds = similarProducts.Select(p => p.ProductID).ToList();
             var products = await _productRepository.GetProductsByIdsAsync(productIds);
-            var relatedProducts = _mapper.Map<List<ProductInfoDto>>(products);
 
+            // Manuel eşleştirme kullanın
+            var relatedProducts = products.Select(p => new ProductInfoDto
+            {
+                ProductID = p.ProductID,
+                Name = p.Name ?? string.Empty,
+                Price = p.ListPrice
+            }).ToList();
 
             var context = string.Join("\n\n", products.Select(p =>
                 $"Product: {p.Name}\n" +
@@ -62,19 +65,14 @@ namespace AdventureWorksAIHub.Infrastructure.Services
                 $"Description: {p.ProductDescription?.Description ?? "No description available"}"
             ));
 
-
             var enhancedPrompt = $@"
             Answer the following question based on the product information provided:
-
             {context}
-
             Question: {question}
-
             Answer:";
 
             var answer = await _ollamaService.GenerateCompletionAsync(enhancedPrompt, 0.7f);
 
-            
             return new RagResponseDto
             {
                 Answer = answer,

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "a68qQBQL8Fw=",
+  "dgSpecHash": "RUlND9JTW7A=",
   "success": true,
   "projectFilePath": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\AdventureWorksAIHub.csproj",
   "expectedPackageFiles": [
@@ -56,7 +56,11 @@
     "C:\\Users\\Cihan\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512",
     "C:\\Users\\Cihan\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Cihan\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Cihan\\.nuget\\packages\\nettopologysuite\\2.5.0\\nettopologysuite.2.5.0.nupkg.sha512",
+    "C:\\Users\\Cihan\\.nuget\\packages\\nredisstack\\1.0.0\\nredisstack.1.0.0.nupkg.sha512",
+    "C:\\Users\\Cihan\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\Cihan\\.nuget\\packages\\scalar.aspnetcore\\1.2.66\\scalar.aspnetcore.1.2.66.nupkg.sha512",
+    "C:\\Users\\Cihan\\.nuget\\packages\\stackexchange.redis\\2.8.37\\stackexchange.redis.2.8.37.nupkg.sha512",
     "C:\\Users\\Cihan\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\Cihan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\Cihan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",

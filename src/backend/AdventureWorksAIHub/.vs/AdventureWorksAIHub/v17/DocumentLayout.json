@@ -3,48 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|solutionrelative:adventureworksaihub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\application\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\application\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\domain\\entities\\productdescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\domain\\entities\\productdescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\domain\\entities\\productvector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\domain\\entities\\productvector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub\\middleware\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|solutionrelative:adventureworksaihub\\middleware\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|solutionrelative:adventureworksaihub\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.infrastructure\\persisitence\\adventureworkscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|solutionrelative:adventureworksaihub.infrastructure\\persisitence\\adventureworkscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.infrastructure\\services\\ragservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|solutionrelative:adventureworksaihub.infrastructure\\services\\ragservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub\\controllers\\ragcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|solutionrelative:adventureworksaihub\\controllers\\ragcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.infrastructure\\services\\vectorstoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|solutionrelative:adventureworksaihub.infrastructure\\services\\vectorstoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|solutionrelative:adventureworksaihub\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|solutionrelative:adventureworksaihub\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|solutionrelative:adventureworksaihub.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|solutionrelative:adventureworksaihub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.infrastructure\\persisitence\\repositories\\productvectorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|solutionrelative:adventureworksaihub.infrastructure\\persisitence\\repositories\\productvectorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\domain\\entities\\productvector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\domain\\entities\\productvector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\application\\dtos\\ragresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\application\\dtos\\ragresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.infrastructure\\persisitence\\adventureworkscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|solutionrelative:adventureworksaihub.infrastructure\\persisitence\\adventureworkscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub\\middleware\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|solutionrelative:adventureworksaihub\\middleware\\errorhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\application\\requests\\questionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\application\\requests\\questionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.infrastructure\\services\\ollamaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,12 +63,20 @@
       "RelativeMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|solutionrelative:adventureworksaihub.infrastructure\\persisitence\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\domain\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\domain\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\application\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\application\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\domain\\repositories\\iproductvectorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\domain\\repositories\\iproductvectorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\domain\\entities\\productdescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\domain\\entities\\productdescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\domain\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\domain\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -71,56 +87,20 @@
       "RelativeMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|solutionrelative:adventureworksaihub\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub\\controllers\\ragcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|solutionrelative:adventureworksaihub\\controllers\\ragcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.infrastructure\\services\\ragservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|solutionrelative:adventureworksaihub.infrastructure\\services\\ragservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.infrastructure\\services\\vectorstoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|solutionrelative:adventureworksaihub.infrastructure\\services\\vectorstoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.infrastructure\\persisitence\\repositories\\productvectorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|solutionrelative:adventureworksaihub.infrastructure\\persisitence\\repositories\\productvectorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\application\\services\\ivectorstoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\application\\services\\ivectorstoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\application\\services\\iragservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\application\\services\\iragservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\application\\services\\iollamaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\application\\services\\iollamaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\application\\dtos\\searchresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\application\\dtos\\searchresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\application\\dtos\\ragresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\application\\dtos\\ragresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.core\\application\\dtos\\productinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE0D98D2-FF13-4E65-9066-8F60D297C61C}|AdventureWorksAIHub.Core\\AdventureWorksAIHub.Core.csproj|solutionrelative:adventureworksaihub.core\\application\\dtos\\productinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub.infrastructure\\external\\ollamaclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}|AdventureWorksAIHub.Infrastructure\\AdventureWorksAIHub.Infrastructure.csproj|solutionrelative:adventureworksaihub.infrastructure\\external\\ollamaclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub\\adventureworksaihub.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|solutionrelative:adventureworksaihub\\adventureworksaihub.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|c:\\users\\cihan\\desktop\\adventureworksaihub\\adventureworksaihub\\src\\backend\\adventureworksaihub\\adventureworksaihub\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52C02E37-0364-424C-8672-34FF71963EBC}|AdventureWorksAIHub\\AdventureWorksAIHub.csproj|solutionrelative:adventureworksaihub\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -150,39 +130,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Domain\\Entities\\Product.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Entities\\Product.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Core\\Domain\\Entities\\Product.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAqwDYAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "ProductVectorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Persisitence\\Repositories\\ProductVectorRepository.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub.Infrastructure\\Persisitence\\Repositories\\ProductVectorRepository.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Persisitence\\Repositories\\ProductVectorRepository.cs",
+              "RelativeToolTip": "AdventureWorksAIHub.Infrastructure\\Persisitence\\Repositories\\ProductVectorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowBcAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:22:59.785Z",
+              "WhenOpened": "2025-05-19T21:00:37.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProductDescription.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Entities\\ProductDescription.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Domain\\Entities\\ProductDescription.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Entities\\ProductDescription.cs*",
-              "RelativeToolTip": "AdventureWorksAIHub.Core\\Domain\\Entities\\ProductDescription.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
+              "Title": "VectorStoreService.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Services\\VectorStoreService.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub.Infrastructure\\Services\\VectorStoreService.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Services\\VectorStoreService.cs",
+              "RelativeToolTip": "AdventureWorksAIHub.Infrastructure\\Services\\VectorStoreService.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAwwHUAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T19:28:34.045Z",
+              "WhenOpened": "2025-05-19T18:21:07.27Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\appsettings.json",
               "RelativeDocumentMoniker": "AdventureWorksAIHub\\appsettings.json",
               "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\appsettings.json",
               "RelativeToolTip": "AdventureWorksAIHub\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-05-19T19:27:01.357Z",
               "EditorCaption": ""
@@ -190,123 +170,149 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ProductVector.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Entities\\ProductVector.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Domain\\Entities\\ProductVector.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Entities\\ProductVector.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Core\\Domain\\Entities\\ProductVector.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:23:13.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AdventureWorksContext.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Persisitence\\AdventureWorksContext.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Infrastructure\\Persisitence\\AdventureWorksContext.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Persisitence\\AdventureWorksContext.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Infrastructure\\Persisitence\\AdventureWorksContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAcwBgAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:21:32.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "AdventureWorksAIHub\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "AdventureWorksAIHub\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAmwBsAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwCEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T18:12:17.291Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Mappings\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Application\\Mappings\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Mappings\\MappingProfile.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Core\\Application\\Mappings\\MappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:19:28.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ProductDto.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Dtos\\ProductDto.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Application\\Dtos\\ProductDto.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Dtos\\ProductDto.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Core\\Application\\Dtos\\ProductDto.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowA0AAAAqAAAAAAAAAA==",
+              "Title": "RagController.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Controllers\\RagController.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub\\Controllers\\RagController.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Controllers\\RagController.cs",
+              "RelativeToolTip": "AdventureWorksAIHub\\Controllers\\RagController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwCcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:19:00.829Z",
+              "WhenOpened": "2025-05-19T18:12:32.723Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
+              "Title": "ProductVector.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Entities\\ProductVector.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Domain\\Entities\\ProductVector.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Entities\\ProductVector.cs",
+              "RelativeToolTip": "AdventureWorksAIHub.Core\\Domain\\Entities\\ProductVector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T20:45:08.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RagService.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Services\\RagService.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub.Infrastructure\\Services\\RagService.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Services\\RagService.cs",
+              "RelativeToolTip": "AdventureWorksAIHub.Infrastructure\\Services\\RagService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T18:21:14.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "AdventureWorksAIHub.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T21:09:38.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RagResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Dtos\\RagResponseDto.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Application\\Dtos\\RagResponseDto.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Dtos\\RagResponseDto.cs",
+              "RelativeToolTip": "AdventureWorksAIHub.Core\\Application\\Dtos\\RagResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T20:45:28.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Program.cs",
               "RelativeDocumentMoniker": "AdventureWorksAIHub\\Program.cs",
               "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Program.cs",
               "RelativeToolTip": "AdventureWorksAIHub\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T19:17:24.264Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ErrorHandlingMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Middleware\\ErrorHandlingMiddleware.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub\\Middleware\\ErrorHandlingMiddleware.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Middleware\\ErrorHandlingMiddleware.cs",
-              "RelativeToolTip": "AdventureWorksAIHub\\Middleware\\ErrorHandlingMiddleware.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAUwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:24:21.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "AdventureWorksAIHub\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "AdventureWorksContext.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Persisitence\\AdventureWorksContext.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub.Infrastructure\\Persisitence\\AdventureWorksContext.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Persisitence\\AdventureWorksContext.cs",
+              "RelativeToolTip": "AdventureWorksAIHub.Infrastructure\\Persisitence\\AdventureWorksContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:13:06.12Z",
+              "WhenOpened": "2025-05-19T18:21:32.791Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "OllamaService.cs",
               "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Services\\OllamaService.cs",
               "RelativeDocumentMoniker": "AdventureWorksAIHub.Infrastructure\\Services\\OllamaService.cs",
               "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Services\\OllamaService.cs",
               "RelativeToolTip": "AdventureWorksAIHub.Infrastructure\\Services\\OllamaService.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAgwBMAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAcwFQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T18:20:59.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ErrorHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Middleware\\ErrorHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub\\Middleware\\ErrorHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Middleware\\ErrorHandlingMiddleware.cs",
+              "RelativeToolTip": "AdventureWorksAIHub\\Middleware\\ErrorHandlingMiddleware.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwBMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T18:24:21.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "QuestionRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Requests\\QuestionRequest.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Application\\Requests\\QuestionRequest.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Requests\\QuestionRequest.cs",
+              "RelativeToolTip": "AdventureWorksAIHub.Core\\Application\\Requests\\QuestionRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T20:17:24.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Persisitence\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "AdventureWorksAIHub.Infrastructure\\Persisitence\\Repositories\\ProductRepository.cs",
@@ -319,33 +325,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IProductVectorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Repositories\\IProductVectorRepository.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Domain\\Repositories\\IProductVectorRepository.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Repositories\\IProductVectorRepository.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Core\\Domain\\Repositories\\IProductVectorRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Dtos\\ProductDto.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Application\\Dtos\\ProductDto.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Dtos\\ProductDto.cs",
+              "RelativeToolTip": "AdventureWorksAIHub.Core\\Application\\Dtos\\ProductDto.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowA0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:23:29.94Z",
+              "WhenOpened": "2025-05-19T18:19:00.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductDescription.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Entities\\ProductDescription.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Domain\\Entities\\ProductDescription.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Entities\\ProductDescription.cs",
+              "RelativeToolTip": "AdventureWorksAIHub.Core\\Domain\\Entities\\ProductDescription.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T19:28:34.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Domain\\Entities\\Product.cs",
+              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Entities\\Product.cs",
+              "RelativeToolTip": "AdventureWorksAIHub.Core\\Domain\\Entities\\Product.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAqwDYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T18:22:59.785Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "RagService.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Services\\RagService.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Infrastructure\\Services\\RagService.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Services\\RagService.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Infrastructure\\Services\\RagService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAcwCUAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:21:14.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Domain\\Repositories\\IProductRepository.cs",
               "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Domain\\Repositories\\IProductRepository.cs",
@@ -358,7 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AdventureWorksAIHub\\Properties\\launchSettings.json",
@@ -371,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Dockerfile",
               "RelativeDocumentMoniker": "AdventureWorksAIHub\\Dockerfile",
@@ -380,45 +399,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-05-19T19:26:23.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "VectorStoreService.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Services\\VectorStoreService.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Infrastructure\\Services\\VectorStoreService.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Services\\VectorStoreService.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Infrastructure\\Services\\VectorStoreService.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAmwG8AAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:21:07.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "RagController.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Controllers\\RagController.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub\\Controllers\\RagController.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Controllers\\RagController.cs",
-              "RelativeToolTip": "AdventureWorksAIHub\\Controllers\\RagController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBoAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:12:32.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ProductVectorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Persisitence\\Repositories\\ProductVectorRepository.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Infrastructure\\Persisitence\\Repositories\\ProductVectorRepository.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\Persisitence\\Repositories\\ProductVectorRepository.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Infrastructure\\Persisitence\\Repositories\\ProductVectorRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAuwDQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:21:59.084Z",
               "EditorCaption": ""
             },
             {
@@ -437,32 +417,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "IRagService.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Services\\IRagService.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Application\\Services\\IRagService.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Services\\IRagService.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Core\\Application\\Services\\IRagService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:15:15.474Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IOllamaService.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Services\\IOllamaService.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Application\\Services\\IOllamaService.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Services\\IOllamaService.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Core\\Application\\Services\\IOllamaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:14:58.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
               "Title": "SearchResultDto.cs",
               "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Dtos\\SearchResultDto.cs",
               "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Application\\Dtos\\SearchResultDto.cs",
@@ -475,20 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "RagResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Dtos\\RagResponseDto.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Application\\Dtos\\RagResponseDto.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Dtos\\RagResponseDto.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Core\\Application\\Dtos\\RagResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:19:09.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 23,
               "Title": "ProductInfoDto.cs",
               "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Core\\Application\\Dtos\\ProductInfoDto.cs",
               "RelativeDocumentMoniker": "AdventureWorksAIHub.Core\\Application\\Dtos\\ProductInfoDto.cs",
@@ -501,20 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "OllamaClient.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\External\\OllamaClient.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub.Infrastructure\\External\\OllamaClient.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub.Infrastructure\\External\\OllamaClient.cs",
-              "RelativeToolTip": "AdventureWorksAIHub.Infrastructure\\External\\OllamaClient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T18:22:12.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 24,
               "Title": "AdventureWorksAIHub",
               "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\AdventureWorksAIHub.csproj",
               "RelativeDocumentMoniker": "AdventureWorksAIHub\\AdventureWorksAIHub.csproj",
@@ -522,19 +450,6 @@
               "RelativeToolTip": "AdventureWorksAIHub\\AdventureWorksAIHub.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-05-19T17:43:24.789Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "AdventureWorksAIHub\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\Cihan\\Desktop\\AdventureWorksAIHub\\AdventureWorksAIHub\\src\\backend\\AdventureWorksAIHub\\AdventureWorksAIHub\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "AdventureWorksAIHub\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T17:41:10.53Z",
               "EditorCaption": ""
             }
           ]
