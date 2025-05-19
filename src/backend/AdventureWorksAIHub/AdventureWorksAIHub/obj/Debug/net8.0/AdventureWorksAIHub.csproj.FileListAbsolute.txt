@@ -149,3 +149,4 @@ C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\Adven
 C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\AdventureWorksAIHub\AdventureWorksAIHub\bin\Debug\net8.0\AdventureWorksAIHub.Core.pdb
 C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\AdventureWorksAIHub\AdventureWorksAIHub\bin\Debug\net8.0\AdventureWorksAIHub.Infrastructure.pdb
 C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\AdventureWorksAIHub\AdventureWorksAIHub\obj\Debug\net8.0\AdventureWorksAIHub.sourcelink.json
+C:\Users\Cihan\Desktop\AdventureWorksAIHub\AdventureWorksAIHub\src\backend\AdventureWorksAIHub\AdventureWorksAIHub\bin\Debug\net8.0\Scalar.AspNetCore.dll

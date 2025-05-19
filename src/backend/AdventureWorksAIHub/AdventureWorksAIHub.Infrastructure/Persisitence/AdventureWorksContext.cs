@@ -22,8 +22,8 @@ namespace AdventureWorksAIHub.Infrastructure.Persisitence
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Configure tables
-            modelBuilder.Entity<Product>().ToTable("Product");
-            modelBuilder.Entity<ProductDescription>().ToTable("ProductDescription");
+            modelBuilder.Entity<Product>().ToTable("Product", "Production"); 
+            modelBuilder.Entity<ProductDescription>().ToTable("ProductDescription", "Production");
 
             // Configure relationships
             modelBuilder.Entity<Product>()
