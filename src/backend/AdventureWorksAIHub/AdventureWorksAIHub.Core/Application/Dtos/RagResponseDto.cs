@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace AdventureWorksAIHub.Core.Application.Dtos
 {
-    internal class RagResponseDto
+    public class RagResponseDto
     {
+        public string Answer { get; set; }
+        public List<ProductInfoDto> RelatedProducts { get; set; } = new List<ProductInfoDto>();
     }
 }

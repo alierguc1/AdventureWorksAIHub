@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace AdventureWorksAIHub.Core.Application.Dtos
 {
-    internal class ProductDto
+    public class ProductDto
     {
+        public int ProductID { get; set; }
+        public string Name { get; set; }
+        public string ProductNumber { get; set; }
+        public string Color { get; set; }
+        public decimal ListPrice { get; set; }
+        public string Size { get; set; }
+        public decimal? Weight { get; set; }
+        public string Description { get; set; }
     }
 }
