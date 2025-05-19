@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace AdventureWorksAIHub.Core.Domain.Entities
 {
-    internal class ProductVector
+    public class ProductVector
     {
+        public int ProductVectorID { get; set; }
+        public int ProductID { get; set; }
+        public string Text { get; set; }
+        public string Embedding { get; set; }
+        public virtual Product Product { get; set; }
     }
 }
