@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AdventureWorksAIHub.Core.Application.Dtos;
+using AdventureWorksAIHub.Core.Domain.Entities;
+using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +9,16 @@ using System.Threading.Tasks;
 
 namespace AdventureWorksAIHub.Core.Application.Mappings
 {
-    internal class MappingProfile
+    public class MappingProfile : Profile
     {
+        public MappingProfile()
+        {
+            CreateMap<Product, ProductDto>()
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src =>
+                    src.ProductDescription != null ? src.ProductDescription.Description : null));
+
+            CreateMap<Product, ProductInfoDto>()
+                .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.ListPrice));
+        }
     }
 }

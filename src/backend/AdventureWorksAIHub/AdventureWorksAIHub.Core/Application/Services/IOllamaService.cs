@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace AdventureWorksAIHub.Core.Application.Services
 {
-    internal interface IOllamaService
+    public interface IOllamaService
     {
+        Task<string> GenerateCompletionAsync(string prompt, float temperature = 0.7f);
+        Task<float[]> EmbedTextAsync(string text);
     }
 }
