@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorksAIHub", "AdventureWorksAIHub\AdventureWorksAIHub.csproj", "{52C02E37-0364-424C-8672-34FF71963EBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorksAIHub.Core", "AdventureWorksAIHub.Core\AdventureWorksAIHub.Core.csproj", "{CE0D98D2-FF13-4E65-9066-8F60D297C61C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorksAIHub.Infrastructure", "AdventureWorksAIHub.Infrastructure\AdventureWorksAIHub.Infrastructure.csproj", "{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{52C02E37-0364-424C-8672-34FF71963EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52C02E37-0364-424C-8672-34FF71963EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52C02E37-0364-424C-8672-34FF71963EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE0D98D2-FF13-4E65-9066-8F60D297C61C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE0D98D2-FF13-4E65-9066-8F60D297C61C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE0D98D2-FF13-4E65-9066-8F60D297C61C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE0D98D2-FF13-4E65-9066-8F60D297C61C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB7AC35-52E4-4A11-BC82-A711644E6D6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
