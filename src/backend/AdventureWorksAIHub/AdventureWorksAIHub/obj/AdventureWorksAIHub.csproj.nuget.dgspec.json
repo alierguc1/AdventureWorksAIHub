@@ -137,6 +137,10 @@
               "target": "Package",
               "version": "[1.0.0, )"
             },
+            "Qdrant.Client": {
+              "target": "Package",
+              "version": "[1.14.0, )"
+            },
             "StackExchange.Redis": {
               "target": "Package",
               "version": "[2.8.37, )"

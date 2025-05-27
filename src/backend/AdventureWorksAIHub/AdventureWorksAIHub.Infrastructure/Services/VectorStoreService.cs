@@ -4,6 +4,9 @@ using AdventureWorksAIHub.Core.Domain.Entities;
 using AdventureWorksAIHub.Core.Domain.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using NetTopologySuite.Operation.Distance;
+using Qdrant.Client;
+using Qdrant.Client.Grpc;
 using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
@@ -17,193 +20,261 @@ namespace AdventureWorksAIHub.Infrastructure.Services
     public class VectorStoreService : IVectorStoreService
     {
         private readonly IProductRepository _productRepository;
-        private readonly IConnectionMultiplexer _redis;
-        private readonly IDatabase _db;
+        private readonly QdrantClient _qdrantClient;
         private readonly IOllamaService _ollamaService;
         private readonly ILogger<VectorStoreService> _logger;
-        private readonly string _keyPrefix;
+        private readonly string _collectionName;
         private readonly int _batchSize;
-        private readonly bool _isRedisVectorSearchEnabled;
 
         public VectorStoreService(
             IProductRepository productRepository,
-            IConnectionMultiplexer redis,
+            QdrantClient qdrantClient,
             IOllamaService ollamaService,
             ILogger<VectorStoreService> logger,
             IConfiguration configuration)
         {
             _productRepository = productRepository;
-            _redis = redis;
-            _db = _redis.GetDatabase();
+            _qdrantClient = qdrantClient;
             _ollamaService = ollamaService;
             _logger = logger;
 
-            // Redis ile ilgili ayarları configuration'dan al
-            _keyPrefix = configuration.GetValue<string>("VectorStore:KeyPrefix") ?? "product_vector:";
-            _batchSize = configuration.GetValue<int>("VectorStore:BatchSize", 10);
+            _collectionName = configuration.GetValue<string>("VectorStore:CollectionName") ?? "product_vectors";
+            _batchSize = configuration.GetValue<int>("VectorStore:BatchSize", 50);
 
-            // Başlangıçta RedisSearch'ü kullanmadan devam edelim
-            _isRedisVectorSearchEnabled = false;
+            _logger.LogInformation("VectorStoreService initialized. Collection: {CollectionName}", _collectionName);
 
-            _logger.LogInformation("VectorStoreService initialized with Redis. KeyPrefix: {KeyPrefix}, VectorSearch: {VectorSearchEnabled}",
-                _keyPrefix, _isRedisVectorSearchEnabled);
+            // Collection'ı başlangıçta kontrol et
+            InitializeCollectionAsync().GetAwaiter().GetResult();
+        }
+
+        private async Task InitializeCollectionAsync()
+        {
+            try
+            {
+                var collections = await _qdrantClient.ListCollectionsAsync();
+                var collectionExists = collections.Contains(_collectionName);
+
+                if (!collectionExists)
+                {
+                    _logger.LogInformation("Collection {CollectionName} does not exist. It will be created during first indexing.", _collectionName);
+                }
+                else
+                {
+                    _logger.LogInformation("Collection {CollectionName} already exists.", _collectionName);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error checking collection: {CollectionName}", _collectionName);
+            }
         }
 
         public async Task IndexProductDescriptionsAsync()
         {
-            _logger.LogInformation("Starting product descriptions indexing in Redis");
+            _logger.LogInformation("Starting product descriptions indexing in Qdrant");
 
-            var products = await _productRepository.GetProductsWithDescriptionsAsync();
-            int count = 0;
-            int total = products.Count();
-
-            _logger.LogInformation("Found {Total} products to index", total);
-
-            foreach (var product in products)
-            {
-                if (product.ProductDescription == null ||
-                    string.IsNullOrEmpty(product.ProductDescription.Description))
-                {
-                    continue;
-                }
-
-                try
-                {
-                    var text = $"Product: {product.Name}. Description: {product.ProductDescription.Description}";
-                    var embedding = await _ollamaService.EmbedTextAsync(text);
-                    var embeddingJson = JsonSerializer.Serialize(embedding);
-
-                    // Redis key
-                    var key = $"{_keyPrefix}{product.ProductID}";
-
-                    // Hash alanları oluştur
-                    var hashEntries = new HashEntry[]
-                    {
-                        new HashEntry("productId", product.ProductID.ToString()),
-                        new HashEntry("text", text),
-                        new HashEntry("embedding", embeddingJson)
-                    };
-
-                    // Redis'e kaydet
-                    await _db.HashSetAsync(key, hashEntries);
-
-                    count++;
-
-                    if (count % _batchSize == 0)
-                    {
-                        _logger.LogInformation($"Indexed {count}/{total} products so far ({(count * 100.0 / total):F1}%)");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, $"Error indexing product {product.ProductID}");
-                }
-            }
-
-            _logger.LogInformation($"Completed indexing {count}/{total} products in Redis");
-        }
-
-        public async Task<List<SearchResultDto>> FindSimilarProductsAsync(string query, int limit = 5)
-        {
-            _logger.LogInformation("Finding products similar to: '{Query}', limit: {Limit}", query, limit);
-
-            var queryEmbedding = await _ollamaService.EmbedTextAsync(query);
-            _logger.LogDebug("Generated embedding for query with dimension {Dimension}", queryEmbedding.Length);
-
-            // Vector search kullanım durumuna göre yöntem seç
-            if (_isRedisVectorSearchEnabled)
-            {
-                try
-                {
-                    // Bu kısmı şimdilik devre dışı bırakalım, önce basit Redis kullanımı yapalım
-                    _logger.LogWarning("Redis Vector Search is enabled but not yet implemented. Using fallback method.");
-                    return await FindSimilarProductsFallbackAsync(queryEmbedding, limit);
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Error using Redis Vector Search. Falling back to in-memory calculation.");
-                    return await FindSimilarProductsFallbackAsync(queryEmbedding, limit);
-                }
-            }
-            else
-            {
-                return await FindSimilarProductsFallbackAsync(queryEmbedding, limit);
-            }
-        }
-
-        // Bellek içi benzerlik hesaplama metodu (Redis Vector Search olmadan)
-        private async Task<List<SearchResultDto>> FindSimilarProductsFallbackAsync(float[] queryEmbedding, int limit = 5)
-        {
             try
             {
-                _logger.LogInformation("Using in-memory similarity calculation");
+                var products = await _productRepository.GetProductsWithDescriptionsAsync();
+                int count = 0;
+                int total = products.Count();
 
-                // Tüm ürün vektörlerini Redis'ten al
-                var server = _redis.GetServer(_redis.GetEndPoints().First());
-                var keys = server.Keys(pattern: $"{_keyPrefix}*").ToArray();
+                _logger.LogInformation("Found {Total} products to index", total);
 
-                _logger.LogDebug("Found {Count} product keys in Redis", keys.Length);
-
-                var results = new List<SearchResultDto>();
-
-                foreach (var key in keys)
+                if (total == 0)
                 {
+                    _logger.LogWarning("No products found to index");
+                    return;
+                }
+
+                // Collection var mı kontrol et, yoksa oluştur
+                await EnsureCollectionExistsAsync();
+
+                var points = new List<PointStruct>();
+
+                foreach (var product in products)
+                {
+                    if (product.ProductDescription == null ||
+                        string.IsNullOrEmpty(product.ProductDescription.Description))
+                    {
+                        continue;
+                    }
+
                     try
                     {
-                        var hashEntries = await _db.HashGetAllAsync(key);
-                        var dict = hashEntries.ToDictionary(he => he.Name.ToString(), he => he.Value.ToString());
+                        var text = $"Product: {product.Name}. Description: {product.ProductDescription.Description}";
+                        var embedding = await _ollamaService.EmbedTextAsync(text);
 
-                        if (dict.ContainsKey("productId") && dict.ContainsKey("text") && dict.ContainsKey("embedding"))
+                        var point = new PointStruct
                         {
-                            var productId = int.Parse(dict["productId"]);
-                            var text = dict["text"];
-                            var productVector = JsonSerializer.Deserialize<float[]>(dict["embedding"]);
-
-                            var similarity = CosineSimilarity(queryEmbedding, productVector);
-
-                            results.Add(new SearchResultDto
+                            Id = (ulong)product.ProductID,
+                            Vectors = embedding,
+                            Payload =
                             {
-                                ProductID = productId,
-                                Text = text,
-                                Similarity = similarity
-                            });
+                                ["productId"] = product.ProductID,
+                                ["productName"] = product.Name ?? "",
+                                ["text"] = text,
+                                ["description"] = product.ProductDescription.Description ?? ""
+                            }
+                        };
+
+                        points.Add(point);
+                        count++;
+
+                        if (points.Count >= _batchSize)
+                        {
+                            await _qdrantClient.UpsertAsync(_collectionName, points);
+                            _logger.LogInformation("Indexed {Count}/{Total} products ({Percentage:F1}%)",
+                                count, total, (count * 100.0 / total));
+                            points.Clear();
                         }
                     }
                     catch (Exception ex)
                     {
-                        _logger.LogError(ex, $"Error calculating similarity for product key {key}");
+                        _logger.LogError(ex, "Error indexing product {ProductId}: {ProductName}",
+                            product.ProductID, product.Name);
                     }
                 }
 
-                return results
-                    .OrderByDescending(r => r.Similarity)
-                    .Take(limit)
-                    .ToList();
+                // Kalan pointleri kaydet
+                if (points.Count > 0)
+                {
+                    await _qdrantClient.UpsertAsync(_collectionName, points);
+                }
+
+                _logger.LogInformation("Completed indexing {Count}/{Total} products in Qdrant", count, total);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error in fallback similarity calculation: {Error}", ex.Message);
+                _logger.LogError(ex, "Error during product indexing");
+                throw;
+            }
+        }
+
+        private async Task EnsureCollectionExistsAsync()
+        {
+            try
+            {
+                var collections = await _qdrantClient.ListCollectionsAsync();
+                if (!collections.Contains(_collectionName))
+                {
+                    // İlk embedding'i al ve boyutunu öğren
+                    var testEmbedding = await _ollamaService.EmbedTextAsync("test");
+                    var vectorSize = testEmbedding.Length;
+
+                    _logger.LogInformation("Creating collection {CollectionName} with dimension {VectorSize}",
+                        _collectionName, vectorSize);
+
+                    await _qdrantClient.CreateCollectionAsync(
+                        collectionName: _collectionName,
+                        vectorsConfig: new VectorParams
+                        {
+                            Size = (ulong)vectorSize,
+                            Distance = Distance.Cosine
+                        });
+
+                    _logger.LogInformation("Successfully created collection {CollectionName}", _collectionName);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error ensuring collection exists");
+                throw;
+            }
+        }
+
+        public async Task<List<SearchResultDto>> FindSimilarProductsAsync(string query, int limit = 5)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return new List<SearchResultDto>();
+            }
+
+            _logger.LogInformation("Finding products similar to: '{Query}', limit: {Limit}", query, limit);
+
+            try
+            {
+                var queryEmbedding = await _ollamaService.EmbedTextAsync(query);
+                _logger.LogDebug("Generated embedding for query with dimension {Dimension}", queryEmbedding.Length);
+
+                var searchResults = await _qdrantClient.SearchAsync(
+                    collectionName: _collectionName,
+                    vector: queryEmbedding,
+                    limit: (ulong)limit,
+                    payloadSelector: true,
+                    scoreThreshold: 0.1f
+                );
+
+                var results = new List<SearchResultDto>();
+
+                foreach (var result in searchResults)
+                {
+                    try
+                    {
+                        var searchResult = new SearchResultDto
+                        {
+                            ProductID = (int)(long)result.Payload["productId"].IntegerValue,
+                            Text = result.Payload["text"].StringValue,
+                            Similarity = result.Score
+                        };
+                        results.Add(searchResult);
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogWarning(ex, "Error processing search result");
+                    }
+                }
+
+                _logger.LogInformation("Found {Count} similar products", results.Count);
+                return results;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error finding similar products: {Error}", ex.Message);
                 return new List<SearchResultDto>();
             }
         }
 
-        // Kosinüs benzerliği hesaplama
-        private float CosineSimilarity(float[] a, float[] b)
+        public async Task<int> GetVectorCountAsync()
         {
-            float dotProduct = 0;
-            float normA = 0;
-            float normB = 0;
-
-            for (int i = 0; i < Math.Min(a.Length, b.Length); i++)
+            try
             {
-                dotProduct += a[i] * b[i];
-                normA += a[i] * a[i];
-                normB += b[i] * b[i];
-            }
+                var collections = await _qdrantClient.ListCollectionsAsync();
+                if (!collections.Contains(_collectionName))
+                {
+                    return 0;
+                }
 
-            return normA > 0 && normB > 0
-                ? dotProduct / (float)(Math.Sqrt(normA) * Math.Sqrt(normB))
-                : 0;
+                var collectionInfo = await _qdrantClient.GetCollectionInfoAsync(_collectionName);
+                return (int)collectionInfo.VectorsCount;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting vector count");
+                return 0;
+            }
+        }
+
+        public async Task ClearAllVectorsAsync()
+        {
+            try
+            {
+                _logger.LogInformation("Clearing all vectors from collection: {CollectionName}", _collectionName);
+
+                var collections = await _qdrantClient.ListCollectionsAsync();
+                if (collections.Contains(_collectionName))
+                {
+                    await _qdrantClient.DeleteCollectionAsync(_collectionName);
+                    _logger.LogInformation("Collection {CollectionName} deleted", _collectionName);
+                }
+
+                _logger.LogInformation("All vectors cleared successfully");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error clearing vectors");
+                throw;
+            }
         }
     }
 }

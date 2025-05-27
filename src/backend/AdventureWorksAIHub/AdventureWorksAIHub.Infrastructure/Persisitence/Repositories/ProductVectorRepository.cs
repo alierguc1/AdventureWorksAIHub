@@ -14,68 +14,69 @@ using System.Threading.Tasks;
 using static NRedisStack.Search.Schema;
 using Microsoft.Extensions.Configuration;
 using NRedisStack.RedisStackCommands;
+using Qdrant.Client.Grpc;
+using Qdrant.Client;
 
 namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
 {
     public class ProductVectorRepository : IProductVectorRepository
     {
-        private readonly IConnectionMultiplexer _redis;
-        private readonly IDatabase _db;
+        private readonly QdrantClient _qdrantClient;
         private readonly ILogger<ProductVectorRepository> _logger;
-        private readonly string _indexName;
-        private readonly string _keyPrefix;
-        private readonly int _embeddingDimension;
+        private readonly string _collectionName;
+        private readonly int _vectorSize;
 
-        public ProductVectorRepository(IConnectionMultiplexer redis, ILogger<ProductVectorRepository> logger, IConfiguration configuration)
+        public ProductVectorRepository(
+            QdrantClient qdrantClient,
+            ILogger<ProductVectorRepository> logger,
+            IConfiguration configuration)
         {
-            _redis = redis;
-            _db = _redis.GetDatabase();
+            _qdrantClient = qdrantClient;
             _logger = logger;
 
             // Configuration'dan ayarları oku
             var prefix = configuration.GetValue<string>("VectorStore:IndexPrefix") ?? "product_vectors";
-            _indexName = $"{prefix}_idx";
-            _keyPrefix = $"{prefix}:";
-            _embeddingDimension = configuration.GetValue<int>("VectorStore:EmbeddingDimension", 1536);
+            _collectionName = $"{prefix}";
 
-            EnsureIndexExists();
+            // Gerçek embedding boyutunu dinamik olarak belirle
+            _vectorSize = configuration.GetValue<int>("VectorStore:EmbeddingDimension", 3584); // 3584 olarak güncelledik
+
+            EnsureCollectionExistsAsync().GetAwaiter().GetResult();
         }
 
-        private void EnsureIndexExists()
+        private async Task EnsureCollectionExistsAsync()
         {
             try
             {
-                _logger.LogInformation("Checking if Redis index exists: {IndexName}", _indexName);
-                _db.Execute("FT.INFO", _indexName);
-                _logger.LogInformation("Redis index {IndexName} already exists", _indexName);
-            }
-            catch (RedisServerException)
-            {
-                _logger.LogInformation("Creating Redis vector search index: {IndexName}", _indexName);
+                _logger.LogInformation("Checking if Qdrant collection exists: {CollectionName}", _collectionName);
 
-                // HNSW Vector Search indeksi oluştur
-                var parameters = new List<object>
+                var collections = await _qdrantClient.ListCollectionsAsync();
+                var collectionExists = collections.Any(c => c == _collectionName);
+
+                if (!collectionExists)
                 {
-                    _indexName,
-                    "ON", "HASH",
-                    "PREFIX", 1, _keyPrefix,
-                    "SCHEMA",
-                    "productId", "TEXT", "SORTABLE",
-                    "productVectorId", "TEXT", "SORTABLE",
-                    "text", "TEXT",
-                    "embedding", "VECTOR", "HNSW", 6,
-                    "TYPE", "FLOAT32",
-                    "DIM", _embeddingDimension,
-                    "DISTANCE_METRIC", "COSINE",
-                    "INITIAL_CAP", 1000,
-                    "M", 40,
-                    "EF_CONSTRUCTION", 200
-                };
+                    _logger.LogInformation("Creating Qdrant collection: {CollectionName}", _collectionName);
 
-                _db.Execute("FT.CREATE", parameters.ToArray());
+                    await _qdrantClient.CreateCollectionAsync(
+                        collectionName: _collectionName,
+                        vectorsConfig: new VectorParams
+                        {
+                            Size = (ulong)_vectorSize,
+                            Distance = Distance.Cosine
+                        });
 
-                _logger.LogInformation("Successfully created Redis vector search index: {IndexName} with dimension {Dimension}",
-                    _indexName, _embeddingDimension);
+                    _logger.LogInformation("Successfully created Qdrant collection: {CollectionName} with dimension {Dimension}",
+                        _collectionName, _vectorSize);
+                }
+                else
+                {
+                    _logger.LogInformation("Qdrant collection {CollectionName} already exists", _collectionName);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error ensuring Qdrant collection exists: {CollectionName}", _collectionName);
+                throw;
             }
         }
 
@@ -83,31 +84,30 @@ namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
         {
             try
             {
-                _logger.LogInformation("Getting all product vectors from Redis");
+                _logger.LogInformation("Getting all product vectors from Qdrant");
 
+                var scrollResponse = await _qdrantClient.ScrollAsync(
+                    collectionName: _collectionName,
+                    payloadSelector: true,
+                    limit: 1000
+                );
                 var results = new List<ProductVector>();
 
-                // Tüm ürün vektörlerini almak için
-                var server = _redis.GetServer(_redis.GetEndPoints().First());
-                var keys = server.Keys(pattern: $"{_keyPrefix}*").ToArray();
-
-                _logger.LogInformation("Found {Count} product vector keys in Redis", keys.Length);
-
-                foreach (var key in keys)
+                foreach (var point in scrollResponse.Result)
                 {
-                    var hashEntries = await _db.HashGetAllAsync(key);
-                    var productVector = ConvertToProductVector(hashEntries);
+                    var productVector = ConvertToProductVector(point);
                     if (productVector != null)
                     {
                         results.Add(productVector);
                     }
                 }
 
+                _logger.LogInformation("Retrieved {Count} product vectors from Qdrant", results.Count);
                 return results;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error getting all product vectors from Redis");
+                _logger.LogError(ex, "Error getting all product vectors from Qdrant");
                 throw;
             }
         }
@@ -118,28 +118,16 @@ namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
             {
                 _logger.LogInformation("Getting product vector by ID: {Id}", id);
 
-                // Redis'te ProductVectorID ile arama
-                var searchParams = new object[]
-                {
-                    _indexName,
-                    $"@productVectorId:{id}",
-                    "LIMIT", 0, 1
-                };
+                // API uyumluluğu için basit yaklaşım: tüm vektörleri getir ve filtrele
+                var allVectors = await GetAllAsync();
+                var result = allVectors.FirstOrDefault(v => v.ProductVectorID == id);
 
-                var result = (RedisResult)await _db.ExecuteAsync("FT.SEARCH", searchParams);
-                var searchResults = (RedisResult[])result;
-
-                if (Convert.ToInt64(searchResults[0]) > 0)
+                if (result == null)
                 {
-                    // İlk sonucun anahtarını al (1. indeks) ve hash verilerini al
-                    var key = (string)searchResults[1];
-                    var hashEntries = await _db.HashGetAllAsync(key);
-                    return ConvertToProductVector(hashEntries);
+                    _logger.LogInformation("No product vector found with ID: {Id}", id);
                 }
 
-                // Bulunamazsa daha maliyetli yöntemi dene
-                var allVectors = await GetAllAsync();
-                return allVectors.FirstOrDefault(v => v.ProductVectorID == id);
+                return result;
             }
             catch (Exception ex)
             {
@@ -154,16 +142,29 @@ namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
             {
                 _logger.LogInformation("Getting product vector by Product ID: {ProductId}", productId);
 
-                var key = $"{_keyPrefix}{productId}";
-                var hashEntries = await _db.HashGetAllAsync(key);
+                // Basit yöntem: Tüm pointleri al ve filtrele
+                var allPoints = await _qdrantClient.ScrollAsync(
+                    collectionName: _collectionName,
+                    payloadSelector: true,
+                    limit: 10000 // Büyük limit
+                );
 
-                if (hashEntries.Length == 0)
+                var matchingPoint = allPoints.Result.FirstOrDefault(p =>
                 {
-                    _logger.LogInformation("No product vector found for Product ID: {ProductId}", productId);
-                    return null;
+                    if (p.Payload.ContainsKey("productId"))
+                    {
+                        var payloadProductId = (int)(long)p.Payload["productId"].IntegerValue;
+                        return payloadProductId == productId;
+                    }
+                    return false;
+                });
+                if (matchingPoint != null)
+                {
+                    return ConvertToProductVector(matchingPoint);
                 }
 
-                return ConvertToProductVector(hashEntries);
+                _logger.LogInformation("No product vector found for Product ID: {ProductId}", productId);
+                return null;
             }
             catch (Exception ex)
             {
@@ -178,18 +179,23 @@ namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
             {
                 _logger.LogInformation("Adding new product vector for Product ID: {ProductId}", productVector.ProductID);
 
-                var key = $"{_keyPrefix}{productVector.ProductID}";
+                // Embedding'i float array'e dönüştür
+                var embeddingArray = System.Text.Json.JsonSerializer.Deserialize<float[]>(productVector.Embedding);
 
-                // Redis hash olarak vektör bilgilerini sakla
-                var hashEntries = new HashEntry[]
+                var point = new PointStruct
                 {
-                    new HashEntry("productVectorId", productVector.ProductVectorID.ToString()),
-                    new HashEntry("productId", productVector.ProductID.ToString()),
-                    new HashEntry("text", productVector.Text),
-                    new HashEntry("embedding", productVector.Embedding)
+                    Id = (ulong)productVector.ProductID,
+                    Vectors = embeddingArray,
+                    Payload =
+                    {
+                        ["productVectorId"] = productVector.ProductVectorID,
+                        ["productId"] = productVector.ProductID,
+                        ["text"] = productVector.Text ?? string.Empty,
+                        ["embedding"] = productVector.Embedding
+                    }
                 };
 
-                await _db.HashSetAsync(key, hashEntries);
+                await _qdrantClient.UpsertAsync(_collectionName, new[] { point });
                 _logger.LogInformation("Successfully added product vector for Product ID: {ProductId}", productVector.ProductID);
             }
             catch (Exception ex)
@@ -205,7 +211,7 @@ namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
             {
                 _logger.LogInformation("Updating product vector for Product ID: {ProductId}", productVector.ProductID);
 
-                // Redis'te güncelleme, kısmen veya tamamen yeniden yazma şeklinde yapılır
+                // Qdrant'ta update işlemi upsert ile yapılır
                 await AddAsync(productVector);
             }
             catch (Exception ex)
@@ -219,141 +225,144 @@ namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
         {
             try
             {
-                _logger.LogInformation("Saving changes to Redis (no-op in Redis as changes are saved immediately)");
+                _logger.LogInformation("Saving changes to Qdrant (changes are saved immediately)");
 
-                // Redis verileri anında kaydeder, bu nedenle bu metodda ek bir işlem gerektirmez
+                // Qdrant'ta değişiklikler anında kaydedilir
                 await Task.CompletedTask;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error in SaveChangesAsync for Redis");
+                _logger.LogError(ex, "Error in SaveChangesAsync for Qdrant");
                 throw;
             }
         }
 
-        // Redis'ten gelen hash entrylerini ProductVector nesnesine dönüştürme
-        private ProductVector ConvertToProductVector(HashEntry[] hashEntries)
-        {
-            var dict = hashEntries.ToDictionary(he => he.Name.ToString(), he => he.Value.ToString());
-
-            if (!dict.ContainsKey("productId") || !dict.ContainsKey("text") || !dict.ContainsKey("embedding"))
-            {
-                _logger.LogWarning("Incomplete product vector data found in Redis");
-                return null;
-            }
-
-            var productVector = new ProductVector
-            {
-                ProductID = int.Parse(dict["productId"]),
-                Text = dict["text"],
-                Embedding = dict["embedding"]
-            };
-
-            // ProductVectorID varsa ekle
-            if (dict.ContainsKey("productVectorId") && !string.IsNullOrEmpty(dict["productVectorId"]))
-            {
-                productVector.ProductVectorID = int.Parse(dict["productVectorId"]);
-            }
-
-            return productVector;
-        }
-
-        // Vector search ile benzer ürünleri bulma metodu
-        public List<Tuple<ProductVector, float>> FindSimilarVectors(float[] queryEmbedding, int limit = 5)
+        // Vector search ile benzer ürünleri bulma metodu (async version)
+        public async Task<List<Tuple<ProductVector, float>>> FindSimilarVectorsAsync(float[] queryEmbedding, int limit = 5)
         {
             try
             {
-                _logger.LogInformation("Finding similar vectors in Redis with KNN search, limit: {Limit}", limit);
+                _logger.LogInformation("Finding similar vectors in Qdrant with vector search, limit: {Limit}", limit);
 
-                // Embedding'i byte dizisine dönüştür
-                var queryVector = ConvertFloatArrayToByteArray(queryEmbedding);
+                var searchResults = await _qdrantClient.SearchAsync(
+                    collectionName: _collectionName,
+                    vector: queryEmbedding,
+                    limit: (ulong)limit,
+                    payloadSelector: true,
+                    scoreThreshold: 0.1f
+                );
 
-                // KNN sorgusu için parametreler
-                var parameters = new List<object>
+                var results = searchResults.Select(result =>
                 {
-                    _indexName,
-                    $"*=>[KNN {limit} @embedding $query_vector AS score]",
-                    "PARAMS", 2, "query_vector", queryVector,
-                    "DIALECT", 2,
-                    "SORTBY", "score",
-                    "LIMIT", 0, limit
-                };
+                    var productVector = ConvertToProductVector(result);
+                    return new Tuple<ProductVector, float>(productVector, result.Score);
+                }).ToList();
 
-                var result = (RedisResult)_db.Execute("FT.SEARCH", parameters.ToArray());
-                var searchResults = (RedisResult[])result;
-
-                var totalResults = Convert.ToInt64(searchResults[0]);
-                _logger.LogInformation("Found {Count} similar vectors in Redis", totalResults);
-
-                var results = new List<Tuple<ProductVector, float>>();
-
-                // Eğer sonuç varsa işle
-                if (totalResults > 0)
-                {
-                    // Sonuçları işle (indeks 1'den başlar, 2'şer artarak gider - anahtar ve sonra fields)
-                    for (int i = 1; i < searchResults.Length; i += 2)
-                    {
-                        var key = (string)searchResults[i];
-                        var fields = (RedisResult[])searchResults[i + 1];
-
-                        // Hash field değerlerini bir dictionary'ye dönüştür
-                        var fieldDict = new Dictionary<string, string>();
-                        for (int j = 0; j < fields.Length; j += 2)
-                        {
-                            var fieldName = (string)fields[j];
-                            var fieldValue = (string)fields[j + 1];
-                            fieldDict[fieldName] = fieldValue;
-                        }
-
-                        // ProductVector nesnesini oluştur
-                        var productVector = new ProductVector
-                        {
-                            ProductID = int.Parse(fieldDict["productId"]),
-                            Text = fieldDict["text"],
-                            Embedding = fieldDict["embedding"]
-                        };
-
-                        if (fieldDict.ContainsKey("productVectorId") && !string.IsNullOrEmpty(fieldDict["productVectorId"]))
-                        {
-                            productVector.ProductVectorID = int.Parse(fieldDict["productVectorId"]);
-                        }
-
-                        // Benzerlik skoru
-                        float score = 0;
-                        if (fieldDict.ContainsKey("score"))
-                        {
-                            score = float.Parse(fieldDict["score"]);
-                            _logger.LogDebug("Product ID: {ProductId}, Similarity Score: {Score}",
-                                productVector.ProductID, score);
-                        }
-
-                        results.Add(new Tuple<ProductVector, float>(productVector, score));
-                    }
-                }
-
+                _logger.LogInformation("Found {Count} similar vectors in Qdrant", results.Count);
                 return results;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error finding similar vectors in Redis");
+                _logger.LogError(ex, "Error finding similar vectors in Qdrant");
                 throw;
             }
         }
 
-        // Float dizisini byte dizisine dönüştürme
-        private byte[] ConvertFloatArrayToByteArray(float[] array)
+        // Mevcut interface'i korumak için sync version
+        public List<Tuple<ProductVector, float>> FindSimilarVectors(float[] queryEmbedding, int limit = 5)
         {
-            var byteArray = new byte[array.Length * 4]; // Her float 4 byte
-            Buffer.BlockCopy(array, 0, byteArray, 0, byteArray.Length);
-            return byteArray;
+            try
+            {
+                _logger.LogInformation("Finding similar vectors in Qdrant with vector search (sync), limit: {Limit}", limit);
+
+                var searchResults = _qdrantClient.SearchAsync(
+                    collectionName: _collectionName,
+                    vector: queryEmbedding,
+                    limit: (ulong)limit,
+                    payloadSelector: true,
+                    scoreThreshold: 0.1f
+                ).GetAwaiter().GetResult();
+
+                var results = searchResults.Select(result =>
+                {
+                    var productVector = ConvertToProductVector(result);
+                    return new Tuple<ProductVector, float>(productVector, result.Score);
+                }).ToList();
+
+                _logger.LogInformation("Found {Count} similar vectors in Qdrant", results.Count);
+                return results;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error finding similar vectors in Qdrant (sync)");
+                throw;
+            }
         }
 
-        // Byte dizisini float dizisine dönüştürme (gerekirse)
-        private float[] ConvertByteArrayToFloatArray(byte[] array)
+        private ProductVector ConvertToProductVector(RetrievedPoint point)
         {
-            var floatArray = new float[array.Length / 4];
-            Buffer.BlockCopy(array, 0, floatArray, 0, array.Length);
-            return floatArray;
+            try
+            {
+                var payload = point.Payload;
+
+                if (!payload.ContainsKey("productId") || !payload.ContainsKey("text") || !payload.ContainsKey("embedding"))
+                {
+                    _logger.LogWarning("Incomplete product vector data found in Qdrant for point ID: {PointId}", point.Id);
+                    return null;
+                }
+
+                var productVector = new ProductVector
+                {
+                    ProductID = (int)(long)payload["productId"].IntegerValue,
+                    Text = payload["text"].StringValue,
+                    Embedding = payload["embedding"].StringValue
+                };
+
+                if (payload.ContainsKey("productVectorId") && payload["productVectorId"].IntegerValue > 0)
+                {
+                    productVector.ProductVectorID = (int)(long)payload["productVectorId"].IntegerValue;
+                }
+
+                return productVector;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error converting Qdrant point to ProductVector");
+                return null;
+            }
+        }
+
+        private ProductVector ConvertToProductVector(ScoredPoint point)
+        {
+            try
+            {
+                var payload = point.Payload;
+
+                if (!payload.ContainsKey("productId") || !payload.ContainsKey("text") || !payload.ContainsKey("embedding"))
+                {
+                    _logger.LogWarning("Incomplete product vector data found in Qdrant for point ID: {PointId}", point.Id);
+                    return null;
+                }
+
+                var productVector = new ProductVector
+                {
+                    ProductID = (int)(long)payload["productId"].IntegerValue,
+                    Text = payload["text"].StringValue,
+                    Embedding = payload["embedding"].StringValue
+                };
+
+                if (payload.ContainsKey("productVectorId") && payload["productVectorId"].IntegerValue > 0)
+                {
+                    productVector.ProductVectorID = (int)(long)payload["productVectorId"].IntegerValue;
+                }
+
+                return productVector;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error converting Qdrant scored point to ProductVector");
+                return null;
+            }
         }
     }
 }

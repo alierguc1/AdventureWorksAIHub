@@ -80,6 +80,45 @@
           }
         }
       },
+      "Google.Protobuf/3.29.3": {
+        "runtime": {
+          "lib/net5.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.29.3.0",
+            "fileVersion": "3.29.3.0"
+          }
+        }
+      },
+      "Grpc.Core.Api/2.67.0": {
+        "runtime": {
+          "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.67.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Client/2.67.0": {
+        "dependencies": {
+          "Grpc.Net.Common": "2.67.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.67.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Common/2.67.0": {
+        "dependencies": {
+          "Grpc.Core.Api": "2.67.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.67.0.0"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -762,6 +801,18 @@
           }
         }
       },
+      "Qdrant.Client/1.14.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.29.3",
+          "Grpc.Net.Client": "2.67.0"
+        },
+        "runtime": {
+          "lib/net6.0/Qdrant.Client.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.14.0.0"
+          }
+        }
+      },
       "Scalar.AspNetCore/1.2.66": {
         "runtime": {
           "lib/net8.0/Scalar.AspNetCore.dll": {
@@ -1082,6 +1133,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.1",
           "Microsoft.Extensions.Http": "8.0.1",
           "NRedisStack": "1.0.0",
+          "Qdrant.Client": "1.14.0",
           "StackExchange.Redis": "2.8.37",
           "System.Text.Json": "8.0.5"
         },
@@ -1127,6 +1179,34 @@
       "sha512": "sha512-eHEiCO/8+MfNc9nH5dVew/+FvxdaGrkRL4OMNwIz0W79+wtJyEoeRlXJ3SrXhoy9XR58geBYKmzMR83VO7bcAw==",
       "path": "azure.identity/1.7.0",
       "hashPath": "azure.identity.1.7.0.nupkg.sha512"
+    },
+    "Google.Protobuf/3.29.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t7nZFFUFwigCwZ+nIXHDLweXvwIpsOXi+P7J7smPT/QjI3EKxnCzTQOhBqyEh6XEzc/pNH+bCFOOSjatrPt6Tw==",
+      "path": "google.protobuf/3.29.3",
+      "hashPath": "google.protobuf.3.29.3.nupkg.sha512"
+    },
+    "Grpc.Core.Api/2.67.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cL1/2f8kc8lsAGNdfCU25deedXVehhLA6GXKLLN4hAWx16XN7BmjYn3gFU+FBpir5yJynvDTHEypr3Tl0j7x/Q==",
+      "path": "grpc.core.api/2.67.0",
+      "hashPath": "grpc.core.api.2.67.0.nupkg.sha512"
+    },
+    "Grpc.Net.Client/2.67.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ofTjJQfegWkVlk5R4k/LlwpcucpsBzntygd4iAeuKd/eLMkmBWoXN+xcjYJ5IibAahRpIJU461jABZvT6E9dwA==",
+      "path": "grpc.net.client/2.67.0",
+      "hashPath": "grpc.net.client.2.67.0.nupkg.sha512"
+    },
+    "Grpc.Net.Common/2.67.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gazn1cD2Eol0/W5ZJRV4PYbNrxJ9oMs8pGYux5S9E4MymClvl7aqYSmpqgmWAUWvziRqK9K+yt3cjCMfQ3x/5A==",
+      "path": "grpc.net.common/2.67.0",
+      "hashPath": "grpc.net.common.2.67.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -1484,6 +1564,13 @@
       "sha512": "sha512-zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
       "path": "pipelines.sockets.unofficial/2.2.8",
       "hashPath": "pipelines.sockets.unofficial.2.2.8.nupkg.sha512"
+    },
+    "Qdrant.Client/1.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-waxtROsa3bXTjvbPvQbNW+l9wWR6RzNAUYB9oZZXtWt2luB/hSCJbTK94iGdHiyteZCq4SkRXyG7H7Km6+sDpA==",
+      "path": "qdrant.client/1.14.0",
+      "hashPath": "qdrant.client.1.14.0.nupkg.sha512"
     },
     "Scalar.AspNetCore/1.2.66": {
       "type": "package",

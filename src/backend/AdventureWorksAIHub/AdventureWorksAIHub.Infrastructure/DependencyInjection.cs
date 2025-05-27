@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using StackExchange.Redis;
+using Qdrant.Client.Grpc;
+using Qdrant.Client;
 
 namespace AdventureWorksAIHub.Infrastructure
 {
@@ -27,11 +29,21 @@ namespace AdventureWorksAIHub.Infrastructure
             // Repositories
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductVectorRepository, ProductVectorRepository>();
-            services.AddSingleton<IConnectionMultiplexer>(sp =>
+            services.AddSingleton<QdrantClient>(serviceProvider =>
             {
-                var configuration = sp.GetRequiredService<IConfiguration>();
-                var redisConnection = configuration.GetConnectionString("Redis");
-                return ConnectionMultiplexer.Connect(redisConnection);
+                var configuration = serviceProvider.GetRequiredService<IConfiguration>();
+
+                var host = configuration.GetValue<string>("VectorStore:Host") ?? "localhost";
+                var port = configuration.GetValue<int>("VectorStore:Port", 6334);
+                var apiKey = configuration.GetValue<string>("VectorStore:ApiKey");
+                var useHttps = configuration.GetValue<bool>("VectorStore:Https", false);
+
+                if (string.IsNullOrEmpty(apiKey))
+                {
+                    return new QdrantClient(host, port, https: useHttps);
+                }
+
+                return new QdrantClient(host, port, https: useHttps, apiKey: apiKey);
             });
             // Services
             services.AddHttpClient<IOllamaService, OllamaService>();
