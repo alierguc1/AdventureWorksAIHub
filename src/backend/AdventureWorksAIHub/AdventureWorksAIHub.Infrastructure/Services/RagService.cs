@@ -18,7 +18,6 @@ namespace AdventureWorksAIHub.Infrastructure.Services
         private readonly IOllamaService _ollamaService;
         private readonly IMapper _mapper;
         private readonly ILogger<RagService> _logger;
-        //deneme
         public RagService(
             IProductRepository productRepository,
             IVectorStoreService vectorStoreService,

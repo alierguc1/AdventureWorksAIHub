@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventureWorksAIHub.Core.Domain.Entities
+namespace AdventureWorksAIHub.Core.Domain.Entities.Product
 {
     [Table("Product", Schema = "Production")]
     public class Product
@@ -52,7 +52,7 @@ namespace AdventureWorksAIHub.Core.Domain.Entities
         [Column(TypeName = "nchar(3)")]
         public string? WeightUnitMeasureCode { get; set; }
 
-        [Column(TypeName = "decimal(8,2)")] 
+        [Column(TypeName = "decimal(8,2)")]
         public decimal? Weight { get; set; }
         public int DaysToManufacture { get; set; }
 

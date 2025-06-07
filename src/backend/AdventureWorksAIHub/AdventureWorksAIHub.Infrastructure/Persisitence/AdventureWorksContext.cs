@@ -1,4 +1,4 @@
-﻿using AdventureWorksAIHub.Core.Domain.Entities;
+﻿using AdventureWorksAIHub.Core.Domain.Entities.Product;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

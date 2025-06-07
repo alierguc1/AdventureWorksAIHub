@@ -1,5 +1,5 @@
 ﻿using AdventureWorksAIHub.Core.Application.Dtos;
-using AdventureWorksAIHub.Core.Domain.Repositories;
+using AdventureWorksAIHub.Core.Domain.Repositories.Product;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

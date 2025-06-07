@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventureWorksAIHub.Core.Application.Dtos
+namespace AdventureWorksAIHub.Core.Application.Dtos.Product
 {
     public class ProductInfoDto
     {

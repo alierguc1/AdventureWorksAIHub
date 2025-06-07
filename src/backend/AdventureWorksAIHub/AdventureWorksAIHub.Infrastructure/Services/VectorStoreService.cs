@@ -1,7 +1,7 @@
 ﻿using AdventureWorksAIHub.Core.Application.Dtos;
 using AdventureWorksAIHub.Core.Application.Services;
 using AdventureWorksAIHub.Core.Domain.Entities;
-using AdventureWorksAIHub.Core.Domain.Repositories;
+using AdventureWorksAIHub.Core.Domain.Repositories.Product;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using NetTopologySuite.Operation.Distance;

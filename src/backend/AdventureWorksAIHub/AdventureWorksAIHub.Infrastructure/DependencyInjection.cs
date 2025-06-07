@@ -1,5 +1,4 @@
 ﻿using AdventureWorksAIHub.Core.Application.Services;
-using AdventureWorksAIHub.Core.Domain.Repositories;
 using AdventureWorksAIHub.Infrastructure.Persisitence.Repositories;
 using AdventureWorksAIHub.Infrastructure.Persisitence;
 using AdventureWorksAIHub.Infrastructure.Services;
@@ -14,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using StackExchange.Redis;
 using Qdrant.Client.Grpc;
 using Qdrant.Client;
+using AdventureWorksAIHub.Core.Domain.Repositories.Product;
 
 namespace AdventureWorksAIHub.Infrastructure
 {

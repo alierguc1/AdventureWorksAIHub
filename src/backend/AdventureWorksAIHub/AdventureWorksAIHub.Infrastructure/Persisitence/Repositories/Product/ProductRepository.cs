@@ -1,5 +1,5 @@
 ﻿using AdventureWorksAIHub.Core.Domain.Entities;
-using AdventureWorksAIHub.Core.Domain.Repositories;
+using AdventureWorksAIHub.Core.Domain.Repositories.Product;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

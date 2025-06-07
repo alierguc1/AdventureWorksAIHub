@@ -1,4 +1,4 @@
-﻿using AdventureWorksAIHub.Core.Application.Dtos;
+﻿using AdventureWorksAIHub.Core.Application.Dtos.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;

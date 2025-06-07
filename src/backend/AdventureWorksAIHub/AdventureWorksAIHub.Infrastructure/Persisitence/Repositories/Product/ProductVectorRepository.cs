@@ -1,5 +1,4 @@
 ﻿using AdventureWorksAIHub.Core.Domain.Entities;
-using AdventureWorksAIHub.Core.Domain.Repositories;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using NRedisStack.Search.Literals.Enums;
@@ -16,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using NRedisStack.RedisStackCommands;
 using Qdrant.Client.Grpc;
 using Qdrant.Client;
+using AdventureWorksAIHub.Core.Domain.Repositories.Product;
 
 namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
 {

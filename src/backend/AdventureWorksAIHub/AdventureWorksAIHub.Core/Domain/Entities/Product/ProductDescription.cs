@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventureWorksAIHub.Core.Domain.Entities
+namespace AdventureWorksAIHub.Core.Domain.Entities.Product
 {
     [Table("ProductDescription", Schema = "Production")]
     public class ProductDescription
@@ -15,7 +15,7 @@ namespace AdventureWorksAIHub.Core.Domain.Entities
         public int ProductDescriptionID { get; set; }
 
         [Required]
-        [Column(TypeName = "nvarchar(400)")] 
+        [Column(TypeName = "nvarchar(400)")]
         public string Description { get; set; } = string.Empty;
 
         public Guid rowguid { get; set; }

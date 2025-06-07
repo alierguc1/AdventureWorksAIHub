@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventureWorksAIHub.Core.Domain.Repositories
+namespace AdventureWorksAIHub.Core.Domain.Repositories.Product
 {
     public interface IProductVectorRepository
     {
