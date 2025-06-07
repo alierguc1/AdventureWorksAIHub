@@ -1,5 +1,5 @@
-﻿using AdventureWorksAIHub.Core.Application.Dtos.Product;
-using AdventureWorksAIHub.Core.Domain.Entities.Product;
+﻿using AdventureWorksAIHub.Core.Application.Dtos.Products;
+using AdventureWorksAIHub.Core.Domain.Entities.Products;
 using AutoMapper;
 using System;
 using System.Collections.Generic;

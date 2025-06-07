@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventureWorksAIHub.Core.Domain.Entities
+namespace AdventureWorksAIHub.Core.Domain.Entities.Products
 {
     public class ProductVector
     {

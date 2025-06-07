@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventureWorksAIHub.Core.Domain.Entities.Product
+namespace AdventureWorksAIHub.Core.Domain.Entities.Products
 {
     [Table("Product", Schema = "Production")]
     public class Product

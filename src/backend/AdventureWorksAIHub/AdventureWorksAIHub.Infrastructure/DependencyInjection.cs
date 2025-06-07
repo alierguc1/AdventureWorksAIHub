@@ -1,19 +1,12 @@
 ﻿using AdventureWorksAIHub.Core.Application.Services;
-using AdventureWorksAIHub.Infrastructure.Persisitence.Repositories;
 using AdventureWorksAIHub.Infrastructure.Persisitence;
 using AdventureWorksAIHub.Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using StackExchange.Redis;
-using Qdrant.Client.Grpc;
 using Qdrant.Client;
-using AdventureWorksAIHub.Core.Domain.Repositories.Product;
+using AdventureWorksAIHub.Core.Domain.Repositories.Products;
+using AdventureWorksAIHub.Infrastructure.Persisitence.Repositories.Products;
 
 namespace AdventureWorksAIHub.Infrastructure
 {

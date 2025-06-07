@@ -1,6 +1,7 @@
 ﻿using AdventureWorksAIHub.Core.Application.Dtos;
+using AdventureWorksAIHub.Core.Application.Dtos.Products;
 using AdventureWorksAIHub.Core.Application.Services;
-using AdventureWorksAIHub.Core.Domain.Repositories;
+using AdventureWorksAIHub.Core.Domain.Repositories.Products;
 using AutoMapper;
 using Microsoft.Extensions.Logging;
 using System;

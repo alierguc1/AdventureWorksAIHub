@@ -1,5 +1,4 @@
-﻿using AdventureWorksAIHub.Core.Domain.Entities;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using NRedisStack.Search.Literals.Enums;
 using NRedisStack.Search;
@@ -15,9 +14,10 @@ using Microsoft.Extensions.Configuration;
 using NRedisStack.RedisStackCommands;
 using Qdrant.Client.Grpc;
 using Qdrant.Client;
-using AdventureWorksAIHub.Core.Domain.Repositories.Product;
+using AdventureWorksAIHub.Core.Domain.Repositories.Products;
+using AdventureWorksAIHub.Core.Domain.Entities.Products;
 
-namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
+namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories.Products
 {
     public class ProductVectorRepository : IProductVectorRepository
     {
@@ -39,7 +39,7 @@ namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
             _collectionName = $"{prefix}";
 
             // Gerçek embedding boyutunu dinamik olarak belirle
-            _vectorSize = configuration.GetValue<int>("VectorStore:EmbeddingDimension", 3584); // 3584 olarak güncelledik
+            _vectorSize = configuration.GetValue("VectorStore:EmbeddingDimension", 3584); // 3584 olarak güncelledik
 
             EnsureCollectionExistsAsync().GetAwaiter().GetResult();
         }
@@ -153,7 +153,7 @@ namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
                 {
                     if (p.Payload.ContainsKey("productId"))
                     {
-                        var payloadProductId = (int)(long)p.Payload["productId"].IntegerValue;
+                        var payloadProductId = (int)p.Payload["productId"].IntegerValue;
                         return payloadProductId == productId;
                     }
                     return false;
@@ -313,14 +313,14 @@ namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
 
                 var productVector = new ProductVector
                 {
-                    ProductID = (int)(long)payload["productId"].IntegerValue,
+                    ProductID = (int)payload["productId"].IntegerValue,
                     Text = payload["text"].StringValue,
                     Embedding = payload["embedding"].StringValue
                 };
 
                 if (payload.ContainsKey("productVectorId") && payload["productVectorId"].IntegerValue > 0)
                 {
-                    productVector.ProductVectorID = (int)(long)payload["productVectorId"].IntegerValue;
+                    productVector.ProductVectorID = (int)payload["productVectorId"].IntegerValue;
                 }
 
                 return productVector;
@@ -346,14 +346,14 @@ namespace AdventureWorksAIHub.Infrastructure.Persisitence.Repositories
 
                 var productVector = new ProductVector
                 {
-                    ProductID = (int)(long)payload["productId"].IntegerValue,
+                    ProductID = (int)payload["productId"].IntegerValue,
                     Text = payload["text"].StringValue,
                     Embedding = payload["embedding"].StringValue
                 };
 
                 if (payload.ContainsKey("productVectorId") && payload["productVectorId"].IntegerValue > 0)
                 {
-                    productVector.ProductVectorID = (int)(long)payload["productVectorId"].IntegerValue;
+                    productVector.ProductVectorID = (int)payload["productVectorId"].IntegerValue;
                 }
 
                 return productVector;

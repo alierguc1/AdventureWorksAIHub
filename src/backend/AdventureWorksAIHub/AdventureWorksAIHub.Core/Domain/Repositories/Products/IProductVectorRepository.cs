@@ -1,11 +1,11 @@
-﻿using AdventureWorksAIHub.Core.Domain.Entities;
+﻿using AdventureWorksAIHub.Core.Domain.Entities.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventureWorksAIHub.Core.Domain.Repositories.Product
+namespace AdventureWorksAIHub.Core.Domain.Repositories.Products
 {
     public interface IProductVectorRepository
     {
